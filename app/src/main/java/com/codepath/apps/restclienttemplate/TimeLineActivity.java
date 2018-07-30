@@ -28,7 +28,7 @@ public class TimeLineActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_time_line);
+        setContentView(R.layout.activity_timeline);
 
         client = TwitterApp.getRestClient(this);
         //find the RecyclerView
@@ -84,7 +84,9 @@ public class TimeLineActivity extends AppCompatActivity {
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONArray errorResponse) {
                 Log.d("TwitterClient", errorResponse.toString());
-                throwable.printStackTrace();            }
+                throwable.printStackTrace();
+
+            }
 
 
 
